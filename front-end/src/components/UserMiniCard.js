@@ -31,7 +31,7 @@ export const UserMiniCard = ({ userId }) => {
     return (
         <div>
           <Link to={{
-            pathname: `/profile/${userId}`,
+            pathname: `/profile/${userId}`
           }}>
             <p>{firstName}</p>
             <p>{surname}</p>

@@ -2,14 +2,9 @@ import { useState } from 'react';
 import axios from 'axios';
 import jwt from 'jsonwebtoken';
 
-export const PostForm = () => {
+export const CommentForm = ({postId}) => {
     const ACCESS_TOKEN = '39a9d8fddd9c77b6fe1639b79a28df866832c12904a71e55bf83e3f8ccdd898209e5f64301f6650e1a2cb0f7320fc760d528ea09aca2c0ee9643a1dfab7c67d7';
-    const [location, setLocation] = useState('');
     const [content, setContent] = useState('');
-
-    const onChangeLocation = event => {
-        setLocation(event.target.value);
-    };
 
     const onChangeContent = event => {
         setContent(event.target.value);
@@ -31,13 +26,13 @@ export const PostForm = () => {
 
                 axios({
                     method: 'post',
-                    url: 'http://localhost:5000/posts',
+                    url: 'http://localhost:5000/comments',
                     headers: {
                     authorization: 'Bearer ' + authToken
                     },
                     data: {
                         user_id: decoded.id,
-                        location: location,
+                        post_id: postId,
                         content: content
                     }
                 })
@@ -55,10 +50,6 @@ export const PostForm = () => {
         <div>
             <form onSubmit={handleSubmit}>
                 <label>
-                    Location: 
-                    <input type='text' name='location' value={location} onChange={onChangeLocation} />
-                </label>
-                <label>
                     Content: 
                     <textarea cols='40' rows='5' name='content' value={content} onChange={onChangeContent} />
                 </label>
@@ -68,4 +59,4 @@ export const PostForm = () => {
     )
 }
 
-export default PostForm;
+export default CommentForm;

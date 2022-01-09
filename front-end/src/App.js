@@ -8,6 +8,7 @@ import HeroSection from './components/HeroSection';
 import Login from './components/pages/Login';
 import Feed from './components/pages/Feed';
 import UserProfile from './components/pages/UserProfile';
+import PostPage from './components/pages/PostPage';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path='/login' element={<Login/>} />
           <Route path='/feed' element={<Feed/>} />
           <Route path='/profile/:userId' element={<UserProfile/>} />
+          <Route path='/post/:postId' element={<PostPage/>} />
         </Routes>
       </Router>
     </>

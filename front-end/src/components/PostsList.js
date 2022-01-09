@@ -38,7 +38,8 @@ export const PostsList = (params) => {
         <div>
             {posts && posts.map(post => {
                 return <PostCard showUser={showUser}
-                key={post.id} 
+                key={post.id}
+                postId={post.id} 
                 userId={post.user_id}
                 content={post.content}
                 location={post.location}
