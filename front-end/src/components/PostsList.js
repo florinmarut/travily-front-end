@@ -1,6 +1,7 @@
 import PostCard from './PostCard';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import './PostList.css'
 
 export const PostsList = (params) => {
     const [posts, setPosts] = useState(params.posts);
@@ -35,7 +36,7 @@ export const PostsList = (params) => {
     });
 
     return (
-        <div>
+        <div className='postlist'>
             {posts && posts.map(post => {
                 return <PostCard showUser={showUser}
                 key={post.id}

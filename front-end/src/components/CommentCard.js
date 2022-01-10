@@ -1,5 +1,6 @@
 import { UserMiniCard } from "./UserMiniCard";
 
+
 export const CommentCard = ({postId, userId, content, votes, date, updateDate}) => {
     return (
         <div>

@@ -1,0 +1,12 @@
+.user {
+  text-decoration: none;
+  color: black;
+  margin-top: 0px;
+}
+
+#name {
+  display: flex;
+}
+.name {
+  text-decoration: none;
+}

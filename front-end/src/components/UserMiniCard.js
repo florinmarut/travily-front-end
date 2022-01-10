@@ -1,6 +1,9 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import './UserMiniCard.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 
 export const UserMiniCard = ({ userId }) => {
     const authToken = localStorage.getItem('authToken');
@@ -29,14 +32,19 @@ export const UserMiniCard = ({ userId }) => {
     }, [])
 
     return (
-        <div>
+      <div className='user'>
+
+      
+        <div >
           <Link to={{
             pathname: `/profile/${userId}`
-          }}>
-            <p>{firstName}</p>
-            <p>{surname}</p>
+          }}> 
+            <FontAwesomeIcon icon="fas fa-user-circle" />
+            <p className='name' id='name'>{firstName} {surname}</p>
             <p>{description}</p>
           </Link>
+        </div>
+
         </div>
     )
 }

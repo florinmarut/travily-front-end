@@ -1,0 +1,31 @@
+.postcard {
+  display: block;
+  margin: auto;
+  width: 50%;
+  justify-content: center;
+  text-decoration: none;
+  height: auto;
+}
+
+.user-profile {
+  text-decoration: none;
+  color: black;
+  border: 1px solid black;
+}
+
+#content-details {
+  text-decoration: none;
+  color: black;
+  font-family: "PT Sans", sans-serif;
+  margin-top: 20px;
+}
+
+.location {
+  font-size: 1.5rem;
+}
+
+.votes-section {
+  border: 1px solid #000000;
+  padding: 10px;
+  width: 15%;
+}

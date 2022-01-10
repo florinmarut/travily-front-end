@@ -30,6 +30,7 @@ export const Feed = () => {
         <div>
             <PostForm />
             <PostsList posts={posts}/>
+          
         </div>
     )
 }
