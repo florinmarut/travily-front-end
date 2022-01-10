@@ -23,7 +23,7 @@ export const LoginForm = () => {
                 })
                 .then((response) => {
                 localStorage.setItem('authToken', response.data);
-                alert('Ok');
+                window.location.replace("/feed");
                 })
                 .catch((error) => {
                 alert(error);

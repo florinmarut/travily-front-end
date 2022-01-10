@@ -5,6 +5,7 @@ import CommentForm from '../CommentForm';
 import axios from 'axios';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
+import '../PostPage.css';
 
 export const PostPage = () => {
     const { postId } = useParams();
@@ -37,7 +38,9 @@ export const PostPage = () => {
     }, []);
 
     return (
-        <div>
+      <div className='no1-container'>
+        <div className='no2-container'>
+           <div>
           <Card>
             <CardContent>
             <p>Location: {location}</p>
@@ -49,6 +52,9 @@ export const PostPage = () => {
             <CommentForm postId={postId}/>
             <CommentsList postId={postId}/>
         </div>
+        </div>
+      </div>
+       
     )
 }
 

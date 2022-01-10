@@ -2,7 +2,6 @@
   display: block;
   margin: auto;
   width: 50%;
-  justify-content: center;
   text-decoration: none;
   height: auto;
 }
@@ -27,5 +26,5 @@
 .votes-section {
   border: 1px solid #000000;
   padding: 10px;
-  width: 15%;
+  width: 40%;
 }

@@ -49,7 +49,7 @@ export const RegisterForm = () => {
                 password: password
                 })
                 .then((response) => {
-                alert(response.data);
+                window.location.replace("/login");
                 })
                 .catch((error) => {
                       alert(error);
