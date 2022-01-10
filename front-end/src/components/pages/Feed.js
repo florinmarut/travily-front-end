@@ -3,6 +3,7 @@ import PostsList from '../PostsList';
 import { useEffect, useState } from 'react';
 import  { Navigate  } from 'react-router-dom'
 import PostForm from '../PostForm';
+import '../Feed.css';
 
 export const Feed = () => {
     const authToken = localStorage.getItem('authToken');

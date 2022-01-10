@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import axios from 'axios';
 import jwt from 'jsonwebtoken';
+import './PostForm.css'
 
 export const PostForm = () => {
     const ACCESS_TOKEN = '39a9d8fddd9c77b6fe1639b79a28df866832c12904a71e55bf83e3f8ccdd898209e5f64301f6650e1a2cb0f7320fc760d528ea09aca2c0ee9643a1dfab7c67d7';
@@ -52,17 +53,21 @@ export const PostForm = () => {
       };
 
     return (
-        <div>
-            <form onSubmit={handleSubmit}>
-                <label>
+        <div className='postform'>
+            
+            <form onSubmit={handleSubmit} className='form1'>
+                <table>
+                <td className='labels'>
                     Location: 
-                    <input type='text' name='location' value={location} onChange={onChangeLocation} />
-                </label>
-                <label>
+                    <input type='text' name='location' value={location} onChange={onChangeLocation} className='inputs'/>
+                </td>
+                <td className='labels'>
                     Content: 
-                    <textarea cols='40' rows='5' name='content' value={content} onChange={onChangeContent} />
-                </label>
-                <input type='submit' value='submit' />
+                    <textarea cols='40' rows='5' name='content' value={content} onChange={onChangeContent} className='inputs' />
+                </td>
+                <td>One click away<input type='submit' value='Post' className='input-text-button'/>
+                </td>
+                </table>
             </form>
         </div>
     )
