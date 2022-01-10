@@ -44,6 +44,7 @@ export const UserProfile = () => {
             </div>
 
             </div>
+            
             <PostsList userId={userId} />
         </div>
     )
